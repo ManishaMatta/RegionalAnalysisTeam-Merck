@@ -1,10 +1,13 @@
 # python /Users/Manisha/Documents/MS/SDSU/research/HDMA/Merk/RegionalAnalysisTeam-Merk/dataExtraction/census.py
+# https://www.youtube.com/watch?v=JgB_QQaZhfM 
+# https://censusreporter.org/topics/table-codes/
+
 
 import MyCreds
 # import requests
 # from census import Census
 # from us import states
-import censusdata
+import censusdata as c
 import pandas as pd
 
 class census_dataextract:
@@ -38,10 +41,16 @@ def main():
     # census_data=censusdata.download("acs5",2017, censusdata.censusgeo(geography), ['NAME', 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
     census_data=censusdata.download("acs5",2017, censusdata.censusgeo([('state', '36'),('county', '081'),('block group', '*')]), [ 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
     print(census_data)
-
     census_data_hsp=censusdata.download("acs5",2017, censusdata.censusgeo([('state', '36'),('county', '081'),('block group', '*')]), [ 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
 
+# Economic Census (2002 – 2022) [https://www.census.gov/data/developers/data-sets/economic-census.html]
+    geography = [("zip code tabulation area", ["92122", "92123", "92128"])]  
+    # census_data=censusdata.download("acs5",2017, censusdata.censusgeo(geography), ['NAME', 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
+    census_data=censusdata.download("acs5",2017, censusdata.censusgeo([('state', '36'),('county', '081'),('block group', '*')]), [ 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
+    print(census_data)
+    census_data_hsp=censusdata.download("acs5",2017, censusdata.censusgeo([('state', '36'),('county', '081'),('block group', '*')]), [ 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'], key='8b65739ad0c20b9927ef543003f60de1f640de4e')
 
+   
 
     # c.API("8b65739ad0c20b9927ef543003f60de1f640de4e")
     # va_census = c.acs5.state_county_tract(fields = ('NAME', 'C17002_001E', 'C17002_002E', 'C17002_003E', 'B01003_001E'),
@@ -80,3 +89,18 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+general_zip <- getCensus(name = "acs/acs5", vintage = 2021, key = "87b9a0edb9730bb6b16d085c2060d5a49a3cbfac",
+                         vars = vars_general,
+                         #region = z,
+                         region = "zip code tabulation area:*")
+
+census_data = c.acs5.get(('NAME', 'B25034_010E'),
+           {'for': 'zip code tabulation area:*'})
+
+# couldnt find data for 2021
+x=c.censustable(src='acs5',year='2019',table='B01001')
+df = pd.DataFrame(x)
+df.to_csv('census_data.csv', index=False)
+
+# import censusapi

@@ -1,1 +1,9 @@
 dataExtraction/__pycache__
+
+dataExtraction/.DS_Store
+census/zcta_shapefile/*
+census/data/*
+census/.ipynb_checkpoints/*
+.DS_Store
+census_data.csv
+EconomicCensus_2022.csv
