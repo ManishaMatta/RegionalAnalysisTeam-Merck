@@ -8,6 +8,8 @@ This project endeavors to comprehensively analyze and map out the socio-economic
 
 
 ### [ESRI Dashboard](https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3)
+<img width="1509" alt="Screenshot 2024-05-06 at 8 43 31 AM" src="https://github.com/ManishaMatta/RegionalAnalysisTeam-Merck/assets/50313389/5827943d-6442-4ceb-8f17-f4090a5b5a94">
+
 <!-- <iframe width="100%" height="600px" src="https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3"></iframe> -->
 <!-- https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3 -->
 
