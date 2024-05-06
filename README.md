@@ -8,7 +8,9 @@ This project endeavors to comprehensively analyze and map out the socio-economic
 
 
 ### ESRI Dashboard
-<iframe width="100%" height="600px" src="[https://arcgis.com/apps/dashboards/DASHBOARD_ID](https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3)"></iframe>
+<iframe width="100%" height="600px" src="https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3"></iframe>
+<!-- https://sdsugeo.maps.arcgis.com/apps/dashboards/7806834971f84cab950fd2daa7a20be3 -->
+
 
 ### Data Source 
 The data is extracted from the American Community Survey (ACS) and compiled into a singular table. From 23 counties in Texas, California, New Mexico, and Arizona 275 individual zip codes were extracted from those counties by selecting every zip code with at least 1000 residences. These zip codes form the basis of our analysis. 
